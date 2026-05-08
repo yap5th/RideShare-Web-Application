@@ -24,6 +24,7 @@ This collaborative academic web project was developed to promote campus-focused 
 - Responsive header and footer
 - Navigation system
 - Menu system
+- Logout
 
 ## My Contributions
 - Developed the website header and footer
