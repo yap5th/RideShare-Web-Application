@@ -1,10 +1,5 @@
 # RideShare@APU Web Application
 
-## Project Notice
-This repository contains a partial implementation of the original project.
-
-Admin-side backend functionality is available, while certain user and registration backend features have been removed from this version as those components were developed by other team members.
-
 ## Overview
 This collaborative academic web project was developed to promote campus-focused carpooling as a solution to reduce carbon emissions, ease traffic congestion, and improve parking availability among students and staff.
 
@@ -28,16 +23,15 @@ This collaborative academic web project was developed to promote campus-focused 
 
 ## My Contributions
 - Developed the website header and footer
-- Designed and implemented the user registration UI
-- Designed and implemented the driver registration UI
-- **Developed and modified all major project components except for the landing page UI design**
+- Designed and implemented the user and driver registration UI
+- Developed and modified all major project components except for the landing page UI design
 
 ## Collaborative Components
-The landing page sections were originally developed by other team members as part of the collaborative project.
+The landing page UI design was originally developed by other team members as part of the collaborative project.
 
 ## Backend Notice
-- Certain backend functionalities related to user and driver registration are unavailable in this version of the project.
-- The "About Us" section in the landing page navigation is disabled as it contains private information.
+- Certain backend functionalities related to user and driver registration are unavailable in this version of the project
+- The "About Us" section in the landing page navigation is disabled as it contains private information
 
 ## Technologies Used
 - HTML
@@ -54,7 +48,7 @@ The landing page sections were originally developed by other team members as par
 5. Open the project through localhost in a browser
 
 ## Project Status
-Partially completed academic project with functional admin-side features and frontend demonstration components.
+Partially completed academic project with functional admin-side features.
 
 ## Author
 Yap Mei Tong
