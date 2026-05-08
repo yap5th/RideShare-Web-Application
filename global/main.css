@@ -1,0 +1,101 @@
+/* =====================================================
+   CSS VARIABLES
+===================================================== */
+:root {
+    --dark-green: #0D5411;
+    --light-green: #95e67e;
+    --error-red: #DC2626;
+    --hover-green: #F3F7F4;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+}
+
+main {
+    min-height: 680px;
+}
+
+body {
+    padding-top: 45px;
+}
+
+
+/* title font */
+.title {
+    color: var(--white);
+    font-family: "Bowlby One", sans-serif;
+    font-size: 25px;
+}
+
+
+/* link */
+a{
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+
+/* button */
+button {
+    color: var(--white);
+    font-weight: bold;
+    background-color: var(--dark-green);
+    border-radius: 20px;
+    border: 0.5px solid grey;
+    transition: all 0.5s ease;
+}
+
+button:hover {
+    cursor: pointer;
+    color: var(--dark-green);
+    background: var(--light-green);
+}
+
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--light-green);
+    border-radius: 10px;
+}
+
+
+/* menu */
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* menu highlight */
+.leftSideBar nav.menu a.active {
+    background: var(--light-green);
+    color: var(--dark-green);
+    font-weight: 600;
+}
+
+

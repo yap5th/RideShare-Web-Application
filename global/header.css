@@ -1,0 +1,176 @@
+header {
+    width: 100%;
+    background: #333;
+    color: #fff;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+i {
+    transition: all 0.4s ease;
+    font-size: 20px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.container {
+    max-width: 1450px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.desktopNavi {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.desktopNavi ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.desktopNavi ul li {
+    position: relative;
+}
+
+.desktopNavi ul li > a {
+    padding: 15px 20px;
+}
+
+.desktopNavi ul li:hover > a {
+    background-color: #444;
+}
+
+.desktopNavi ul li ul li:hover > a {
+    background: #444;
+}
+
+
+.desktopNavi a.active {
+    color: var(--light-green);
+}
+
+.desktopNavi ul li .dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 106px;
+    background: #111;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.desktopNavi ul li:hover .dropdown,
+.mobileNavi ul li:hover .dropdown {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+.desktopNavi .dropdown li a {
+    padding: 12px 15px;
+}
+
+header button {
+    width: 100px;
+    height: 38px;
+}
+
+.sideMenuIcon {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.sideMenuIcon i:hover,
+.mobileNavi div i:hover {
+    color: var(--light-green);
+}
+
+.mobileNavi {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    background: #333;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.mobileNavi.active {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobileNavi .closeMenuIcon {
+    padding: 10px 0 0 20px;
+}
+
+.mobileNavi ul {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    position: relative;
+}
+
+.mobileNavi ul li > a {
+    padding: 20px 30px;
+}
+
+.mobileNavi .dropdown {
+    position: absolute;
+    top: -10px;
+    right: 100%;
+    width: 135px;
+    background: #111;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.mobileNavi button {
+    margin: 50px auto;
+}
+
+
+@media (max-width: 600px) {
+    .desktopNavi {
+        display: none;
+    }
+
+    .sideMenuIcon {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .desktopNavi ul li .dropdown {
+        position: static;
+        width: 100%;
+    }
+}

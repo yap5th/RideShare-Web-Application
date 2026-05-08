@@ -1,0 +1,247 @@
+/* ========================
+   CARD CONTAINER
+   ======================== */
+.card-container {
+    gap: 20px 45px;
+}
+
+/* ========================
+   User Card
+   ======================== */
+
+
+.user-card {
+    width: 100%;
+    max-height: 110px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.6s ease;
+}
+
+.view-user-btn{
+    position: absolute;
+    right: 20px;
+    top: 45px;
+    font-size: 25px;
+}
+
+.user-personal-info,
+.user-matrics-info {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.user-card.user-details-active { 
+    max-height: 400px; 
+}
+
+.user-card.user-details-active .view-user-btn { 
+    transform: rotate(180deg);
+}
+
+.user-card.user-details-active .user-personal-info, 
+.user-card.user-details-active .user-matrics-info { 
+    opacity: 1; 
+}
+
+.user-card-body {
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-card-body > * { 
+    width: 100%; 
+}
+
+.user-contact { 
+    display: flex; 
+    flex-direction: column;
+    padding: 5px 10px;
+}
+
+.user-contact .username{ 
+    color: var(--light-green);
+}
+
+.user-name-status{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.user-card-body > p.flex-icon {
+    font-size: 12px;
+    padding: 4px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.user-name-status p{
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--dark-green);
+}
+
+.user-contact :nth-child(3),
+.user-contact :nth-child(4){
+    font-size: 14px;
+}
+
+.user-card-body .flex-icon {
+    justify-content: flex-start;
+}
+
+.user-personal-info { 
+    margin: 8px auto; 
+}
+
+.user-table-style {
+    width: 100%;
+    background-color: #fffbf5;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.user-matrics-info .user-table-style {
+    background-color: #F9FCFA;
+}
+
+.user-table-style th,
+.user-table-style td {
+    width: 50%;
+    padding: 5px;
+}
+
+.user-table-style th{
+    color: var(--dark-green);
+    letter-spacing: 0.04em;
+}
+
+.user-card-action {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border-top: 1px solid var(--grey-shadow);
+}
+
+.user-card-action button {
+    height: 40px;
+    border-radius: 5px;
+}
+
+.user-card-action > :first-child {
+    width: 45%;
+}
+
+.user-card-action > :nth-child(2) {
+    width: 55%;
+}
+
+/* one button only */
+.user-card-action > button:only-child {
+    width: 95%;
+}
+
+.toggle-status-btn.user-active {
+    background-color: var(--block-red);
+    color: var(--white);
+}
+
+.toggle-status-btn.user-active:hover {
+    background-color: #FF4747;
+}
+
+
+.toggle-status-btn.user-blocked {
+    background-color: var(--hover-green);
+    color: var(--dark-green);
+}
+
+.toggle-status-btn.user-blocked:hover {
+    background-color: var(--light-green);
+}
+
+
+
+
+
+/* ========================
+   MODAL
+   ======================== */
+.user-modal {
+    width: 60%;
+    height: 600px;
+}
+
+
+
+/* ========================
+   USER MODAL 
+   ======================== */
+
+.user-activity-container {
+    width: 95%;
+    height: 90%;
+}
+
+.user-activity-container .user-activity-menu ul {
+    list-style: none;
+    width: 100%;
+}
+
+.user-activity-container .user-activity-menu ul li {
+    font-size: 14px;
+    color: var(--dark-green);
+    border-bottom: 3px solid var(--hover-green);
+    padding: 10px 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.user-activity-menu ul li.active {
+    border-bottom-color: var(--dark-green);
+    font-weight: bold;
+}
+
+.user-activity-filter {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.user-activity-filter button {
+    width: 100px;
+    height: 30px;
+}
+
+.user-activity-filter button.active {
+    background-color: var(--hover-green);
+    color: var(--dark-green);
+}
+
+.user-activity-data {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+
+/* ===============================================\
+    Mobile Mode
+====================================================*/
+@media (max-width: 560px){
+    .user-modal,
+    .staff-modal{
+        width: 95%;
+        height: 85%;
+    }
+
+}
+

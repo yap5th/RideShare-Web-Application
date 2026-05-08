@@ -1,0 +1,65 @@
+/* =====================================================
+   Reward Card Conatainer
+===================================================== */
+.card-container{
+    gap: 30px 58px;
+}
+
+/* =====================================================
+   Reward Card Conatainer
+===================================================== */
+.reward-card {
+    width: 320px;
+    height: auto;
+    align-items: center;
+}
+
+.reward-content{
+    width: 95%;
+    height: 140px;
+    padding: 8px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reward-content img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: var(--border-radius);
+}
+
+#current-image-container{
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-title{
+    height: auto;
+}
+
+
+.reward-modal {
+    width: 60%;
+    height: 600px;
+}
+
+.reward-modal form {
+    width: 90%;;
+}
+
+@media (max-width: 560px){
+    .reward-modal{
+        width: 95%;
+        height: 550px
+    }
+
+    .reward-card{
+        width: 100%;
+    }
+
+    #reward-form button{
+        margin: 30px auto 25px auto;
+    }
+}

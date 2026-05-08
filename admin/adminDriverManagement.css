@@ -1,0 +1,434 @@
+
+.card-container {
+    margin-top: 15px;
+}
+
+.subpage {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.subpage.request-card-container,
+.subpage.update-card-container 
+{ gap: 40px 52px; }
+ 
+.subpage.driver-card-container { gap: 25px; }
+
+
+.expired {
+    color: var(--error-red) !important;
+    font-weight: bold;
+    position: relative;
+}
+
+.expired::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--error-red); 
+    border-radius: 50%;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+
+/* =====================================================
+   submenue
+===================================================== */
+
+.driver-submenu ul {
+    list-style: none;
+    width: 100%;
+}
+
+.driver-submenu ul li {
+    color: var(--dark-green);
+    border-bottom: 3px solid var(--grey-shadow);
+    padding: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.driver-submenu ul li.active {
+    border-bottom-color: var(--dark-green);
+    font-weight: bold;
+}
+
+
+
+p.flex-icon {
+    justify-content: flex-start;
+    gap: 7px;
+}
+
+p.flex-icon i {
+    font-size: 14px;
+}
+
+.form-group p {
+    margin-bottom: 5px;
+}
+
+.form-group .label,
+table .label {
+    font-size: 13px;
+    color: var(--dark-green);
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.form-group .value,
+table .value {
+    font-size: 14px;
+    color: var(--grey-color);
+}
+
+.form-group .value a {
+    color: var(--light-green);
+}
+
+
+/* =====================================================
+   Driver card
+===================================================== */
+
+.driver-card {
+    width: 49%;
+    max-height: 235px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.driver-card.driver-details-active { max-height: 1000px; }
+.driver-card.driver-details-active .driver-card-bottom { opacity: 1; }
+
+.driver-card-top {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+}
+
+.driver-profile {
+    width: 75px;
+}
+
+.driver-profile img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid var(--grey-shadow);
+}
+
+.driver-username{
+    color: var(--light-green);
+    font-size: 14px;
+}
+.driver-name-status{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.driver-name-status > :first-child {
+    font-weight: bold;
+    color: var(--dark-green);
+}
+
+.driver-card-top > :last-child {
+    font-size: 13px;
+    color: var(--grey-color);
+}
+
+.driver-card-bottom {
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    margin: 10px;
+}
+
+.driver-personal-info {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(4, auto);
+    gap: 15px 50px;
+    padding: 15px 15px 15px 35px;
+    border-radius: 20px;
+    background-color: #fffbf5;
+    margin-bottom: 15px;
+}
+
+.driver-personal-info .form-group { margin: 0; }
+
+.driver-personal-info .form-group .label,
+.driver-personal-info .form-group .value {
+    width: 200px;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    min-width: 0;
+}
+
+.driver-vehicle-info {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F8FBF9;
+    padding: 15px 35px;
+    border-radius: 20px;
+}
+
+.star-rating {
+    display: inline-flex;
+    gap: 3px;
+    font-size: 14px;
+}
+
+.star-rating i { color: #ddd; }
+.star-rating i.filled { color: #f5b301; }
+
+.driver-modal {
+    width: 60%;
+    height: 600px;
+}
+
+
+/* =====================================================
+   Update Card
+===================================================== */
+.update-card-body{
+    padding: 10px 20px;
+} 
+
+.update-username{
+    color: var(--light-green);
+}
+.update-name{
+    color: var(--dark-green);
+    font-size: 20px;
+    font-weight: bold;
+}
+.update-driver-contact{
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--grey-color);
+    margin: 8px 0;
+}
+
+/* =====================================================
+   Request Card
+===================================================== */
+
+.request-card, .update-card {
+    width: 450px;
+    height: auto;
+    overflow: hidden;
+}
+
+.request-card.request-details-active { max-height: 1000px; }
+.request-card.request-details-active .request-card-bottom { opacity: 1; }
+
+.request-card-header {
+    height: 15px;
+    background-color: #DFF2E1;
+}
+
+.request-card-body {
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.request-card-body > * { width: 100%; }
+
+.request-card-body > p.flex-icon,
+.update-card-body > p.flex-icon {
+    font-size: 12px;
+    padding: 4px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.view-btn {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--hover-green);
+    border: 1px solid var(--grey-shadow);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+/* .view-btn i { transform: rotate(-50deg); } */
+.view-btn:hover { background-color: #d9eadf; }
+
+.request-driver-info { display: flex; }
+
+.request-profile { 
+    width: 25%; 
+    padding-left: 15px;
+}
+
+.request-profile img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid var(--grey-shadow);
+}
+
+.request-driver-contact {
+    width: 75%;
+    padding: 5px 10px;
+}
+
+.request-driver-contact p { margin-bottom: 4px; }
+
+.request-driver-contact > :first-child {
+    color: var(--dark-green);
+    font-weight: bold;
+}
+
+.request-driver-contact :nth-child(2),
+.request-driver-contact :nth-child(3) {
+    font-size: 13px;
+}
+
+.request-driver-personal-info { margin: 5px auto; }
+
+.request-driver-personal-info table {
+    width: 100%;
+    background-color: #fffbf5;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.request-driver-personal-info table th,
+.request-driver-personal-info table td {
+    padding: 5px;
+}
+
+.request-documentation,
+.update-documentation {
+    background-color: #F8FBF9;
+    padding: 10px;
+}
+
+.request-documentation p,
+.update-documentationp p {
+    font-size: 14px;
+    color: var(--grey-color);
+}
+
+.request-documentation .form-group,
+.update-documentation .form-group {
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.request-documentation .form-group:nth-child(2) .value,
+.request-documentation .form-group:nth-child(3) .value {
+    display: flex;
+    gap: 10px;
+}
+
+.request-card-bottom {
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    margin: 10px;
+}
+
+.request-card-action,
+.update-card-action {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    border-top: 1px solid var(--grey-shadow);
+}
+
+.request-card-action button, .update-card-action button { height: 40px; }
+
+.reject-btn {
+    width: 30%;
+    background-color: var(--hover-green);
+    color: var(--grey-color);
+    border: none;
+}
+
+.reject-btn:hover { background-color: var(--grey-shadow); }
+
+.accept-btn { width: 60%; }
+
+
+.image-modal{
+    width: 550px;
+    height: auto;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    max-height: 90%;
+    margin: 20px auto;
+}
+
+.image-container img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+@media (max-width: 560px) {
+    .card { margin: 0 auto; }
+
+    .driver-card { width: 100%; }
+
+    .driver-personal-info,
+    .driver-vehicle-info { padding: 15px; }
+
+    .driver-personal-info .form-group .label,
+    .driver-personal-info .form-group .value {
+        width: 120px;
+    }
+
+    .driver-vehicle-info {
+        flex-direction: column;
+    }
+
+    .driver-vehicle-info .form-group .value {
+        display: flex;
+        gap: 10px;
+    }
+
+    .image-modal{
+        width: 85%;
+        height: auto;
+    }
+
+}
