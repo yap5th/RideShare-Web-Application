@@ -1,4 +1,4 @@
-# RideShare@APU Web Application
+# RideShare Web Application
 
 ## Overview
 This collaborative academic web project was developed to promote campus-focused carpooling as a solution to reduce carbon emissions, ease traffic congestion, and improve parking availability among students and staff.
