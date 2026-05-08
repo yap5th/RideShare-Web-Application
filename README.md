@@ -31,7 +31,7 @@ The landing page UI design was originally developed by other team members as par
 
 ## Backend Notice
 - Certain backend functionalities related to user and driver registration are unavailable in this version of the project
-- The "About Us" section in the landing page navigation is disabled as it contains private information
+- The "About Us" section in the landing page navigation is disabled
 
 ## Technologies Used
 - HTML
