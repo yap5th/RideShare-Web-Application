@@ -49,6 +49,3 @@ The landing page UI design was originally developed by other team members as par
 
 ## Project Status
 Partially completed academic project with functional **admin-side features**.
-
-## Author
-Yap Mei Tong
