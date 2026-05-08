@@ -42,7 +42,7 @@ The landing page UI design was originally developed by other team members as par
 
 ## Installation / Running Locally
 1. Download and install XAMPP
-2. Import the MySQL database
+2. Download and import the MySQL database (rideshare.sql)
 3. Place the project folder inside the XAMPP `htdocs` directory
 4. Start Apache and MySQL in XAMPP
 5. Open the project through localhost in a browser
