@@ -24,7 +24,7 @@ This collaborative academic web project was developed to promote campus-focused 
 ## My Contributions
 - Developed the website header and footer
 - Designed and implemented the user and driver registration UI
-- Developed and modified all major project components except for the landing page UI design
+- Developed and modified all major project components **except for the landing page UI design**
 
 ## Collaborative Components
 The landing page UI design was originally developed by other team members as part of the collaborative project.
@@ -48,7 +48,7 @@ The landing page UI design was originally developed by other team members as par
 5. Open the project through localhost in a browser
 
 ## Project Status
-Partially completed academic project with functional admin-side features.
+Partially completed academic project with functional **admin-side features**.
 
 ## Author
 Yap Mei Tong
